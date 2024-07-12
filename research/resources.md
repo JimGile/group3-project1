@@ -74,7 +74,7 @@ You can find these datasets by searching for “Olympics” on Kaggle. Example: 
 - OBS: The Olympic Broadcasting Services is responsible for producing and distributing the broadcast signals of the Olympic Games. They may release viewership statistics and reports. You can check their official website or press releases for any available data.
 
 ## Nielsen
-
+Carl
 - Nielsen Ratings: Nielsen provides media and audience measurement services. They often release reports on viewership statistics for major events like the Olympics. Visit their [website](https://www.nielsen.com/) for insights or reports.
 
 ## Local Broadcasting Networks
