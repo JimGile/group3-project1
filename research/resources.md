@@ -2,19 +2,35 @@
 
 ## Kaggle
 
-- Olympics Dataset: Kaggle hosts various Olympic datasets that include medal counts, athlete details, and historical performance. You can find these datasets by searching for “Olympics” on Kaggle.
-- Example: Olympic Athletes Dataset
-- International Olympic Committee (IOC):
-- IOC Official Website: The IOC website often provides detailed historical data about the Olympics, including medal counts and event results. However, the data might need to be extracted manually or through specific API endpoints.
-- Sports Reference:
+Olympics Dataset: Kaggle hosts various Olympic datasets that include medal counts, athlete details, and historical performance.
+You can find these datasets by searching for “Olympics” on Kaggle. Example: Olympic Athletes Dataset
+
+- [Olympic Summer & Winter Games, 1896-2022](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
+- [olympic-data](https://www.kaggle.com/datasets/bhanupratapbiswas/olympic-data)
+- [olympic-games-medals-19862018](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
+- [Olympics Legacy: 1896-2020](https://www.kaggle.com/datasets/krishd123/olympics-legacy-1896-2020)
+- [Olympics Althlete Events Analysis](https://www.kaggle.com/datasets/samruddhim/olympics-althlete-events-analysis)
+- [Summer Olympics Medals (1976-2008)](https://www.kaggle.com/datasets/divyansh22/summer-olympics-medals)
+
+## International Olympic Committee (IOC)
+
+- [IOC Official Website](https://www.olympic.org/): The IOC website often provides detailed historical data about the Olympics, including medal counts and event results. However, the data might need to be extracted manually or through specific API endpoints.
+- IOC Reports: The IOC sometimes publishes reports and media statistics related to the Olympics. Check their [official website](https://www.olympic.org/) or contact them for any viewership data.
+
+## Sports Reference
+
 - Olympics Sports Reference: The Sports Reference family of sites (e.g., Sports Reference) offers historical data on Olympic events and athletes. They may provide data in a format that is easy to download and analyze.
-- [data.gov](http://data.gov/):
-- USA Government Open Data: The [data.gov](http://data.gov/) site sometimes includes datasets related to sports and international events, including the Olympics. It’s worth checking for any relevant datasets.
+
+## USA Government Open Data
+
+- The [data.gov](http://data.gov/) site sometimes includes datasets related to sports and international events, including the Olympics. It’s worth checking for any relevant datasets.
 
 ## Wikipedia
 
 - Olympic Data on Wikipedia: Wikipedia often has detailed pages with structured data on Olympics, such as medal counts and historical results. You might need to extract data from tables and format it for analysis.
-- Olympics API:
+
+## Olympics API
+
 - Open Source APIs: Some open-source APIs provide access to Olympic data. For example, [The Sports Open Data](https://www.sportsopendata.net/) provides various sports data, including Olympic-related information.
 
 ## Google Dataset Search
@@ -49,10 +65,6 @@
 
 - FRED Data: Managed by the Federal Reserve Bank of St. Louis, FRED offers a wide range of economic data, including GDP. You can access this data through the FRED website and their API.
 
-## Google Dataset Search
-
-- Google Dataset Search: Use Google Dataset Search to find publicly available datasets related to GDP.
-
 ## Eurostat
 
 - Eurostat Data: For European countries, Eurostat provides detailed economic statistics, including GDP, through their [Eurostat website](https://ec.europa.eu/eurostat).
@@ -60,10 +72,6 @@
 ## Olympic Broadcasting Services (OBS)
 
 - OBS: The Olympic Broadcasting Services is responsible for producing and distributing the broadcast signals of the Olympic Games. They may release viewership statistics and reports. You can check their official website or press releases for any available data.
-
-## International Olympic Committee (IOC)
-
-- IOC Reports: The IOC sometimes publishes reports and media statistics related to the Olympics. Check their [official website](https://www.olympic.org/) or contact them for any viewership data.
 
 ## Nielsen
 
