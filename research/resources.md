@@ -43,12 +43,12 @@ You can find these datasets by searching for “Olympics” on Kaggle. Example: 
 - API Access: The World Bank also offers an API for programmatic access to their data.
 
 ## International Monetary Fund (IMF)
-
+site down for API access
 - IMF Data: The IMF provides economic and financial data through its IMF Data website. The World Economic Outlook (WEO) database includes GDP data for various countries.
 - API Access: IMF also provides an API for accessing their datasets.
 
 ## United Nations
-
+data.un.org/Explorer.aspx - in progress
 - UN Data: The United Nations Statistics Division provides economic and social statistics, including GDP data, on their [UN Data website](https://data.un.org/).
 - UN Data API: For advanced users, the UN also offers APIs for data retrieval.
 
@@ -74,7 +74,7 @@ You can find these datasets by searching for “Olympics” on Kaggle. Example: 
 - OBS: The Olympic Broadcasting Services is responsible for producing and distributing the broadcast signals of the Olympic Games. They may release viewership statistics and reports. You can check their official website or press releases for any available data.
 
 ## Nielsen
-Carl
+Carl -- utilzing GWI
 - Nielsen Ratings: Nielsen provides media and audience measurement services. They often release reports on viewership statistics for major events like the Olympics. Visit their [website](https://www.nielsen.com/) for insights or reports.
 
 ## Local Broadcasting Networks
