@@ -15,13 +15,25 @@ class KaggleOlympicGamesMedals:
 
     # Replaces long country names with short names
     country_name_map = {
-        'German Democratic Republic (Germany)': 'Germany',
-        'Federal Republic of Germany': 'Germany',
+        'German Democratic Republic (Germany)': 'German Democratic Republic',
+        'Federal Republic of Germany': 'Federal Republic of Germany',
         "Democratic People's Republic of Korea": 'North Korea',
         "Republic of Korea": "South Korea",
         "People's Republic of China": 'China',
         "Islamic Republic of Iran": 'Iran',
-        "United States of America": 'USA'
+        "United States of America": 'United States'
+    }
+
+    country_code_to_std_name_map = {
+        'GER': 'Germany',
+        'FRG': 'Germany',
+        'GDR': 'Germany',
+        'CZE': 'Czech Republic',
+        'TCH': 'Czech Republic',
+        'IOA': 'Russia',
+        'ROC': 'Russia',
+        'RUS': 'Russia',
+        'URS': 'Russia'
     }
 
     # Replaces changed discipline names
@@ -82,20 +94,62 @@ class KaggleOlympicGamesMedals:
         - results_file_name: The name of the file containing Olympic results data.
         - athletes_file_name: The name of the file containing Olympic athletes data.
         """
+        self.data_dir = data_dir
         self.df_hosts = pd.read_csv(f'{data_dir}/{self.hosts_file_name}')
         self.df_medals = pd.read_csv(f'{data_dir}/{self.medals_file_name}')
         self.df_results = pd.read_csv(f'{data_dir}/{self.results_file_name}')
         self.df_athletes = pd.read_csv(f'{data_dir}/{self.athletes_file_name}')
         print('Data Loaded')
 
+    def explore_data(self, df: pd.DataFrame) -> pd.DataFrame:
+        print("-- Info --")
+        print(df.info())
+        print("\n-- Missing Info --")
+        print(df.isnull().sum())
+        return df.head()
+
     def get_hosts(self) -> pd.DataFrame:
         return self.df_hosts.copy()
+
+    def get_hosts_with_country_codes(self) -> pd.DataFrame:
+        df = self.get_hosts()
+        df.loc[df['game_slug'] == 'melbourne-1956', 'game_location'] = 'Australia'
+        df.loc[df['game_slug'] == 'pyeongchang-2018', 'game_location'] = 'North Korea'
+        df.loc[df['game_slug'] == 'seoul-1988', 'game_location'] = 'South Korea'
+        df.loc[df['game_slug'] == 'moscow-1980', 'game_location'] = 'Soviet Union'
+
+        df_codes = self.get_country_name_codes()
+        df = df.merge(df_codes, how='left',
+                      left_on='game_location', right_on='country_name')
+        df.drop(['country_name'], inplace=True, axis=1)
+        df.rename(
+            columns={'country_3_letter_code': 'game_country_code'}, inplace=True)
+        return df
 
     def get_medals(self) -> pd.DataFrame:
         return self.df_medals.copy()
 
-    def get_results(self) -> pd.DataFrame:
-        return self.df_results.copy()
+    def get_medals_merged(self) -> pd.DataFrame:
+        return self.clean_data(self.merge_hosts(self.get_medals()))
+
+    def get_medals_by_country(self) -> pd.DataFrame:
+        unique_cols: list[str] = [
+            'discipline_title',
+            'slug_game',
+            'event_title',
+            'event_gender',
+            'medal_type',
+            'participant_type',
+            'country_3_letter_code'
+        ]
+        return self.get_medals_merged().drop_duplicates(subset=unique_cols)\
+            .drop(columns=['participant_title', 'athlete_url', 'athlete_full_name', 'country_code'])
+
+    def get_medals_by_std_country_name(self) -> pd.DataFrame:
+        df = self.get_medals_by_country()
+        for key, value in self.country_code_to_std_name_map.items():
+            df.loc[df['country_3_letter_code'] == key, 'country_name'] = value
+        return df
 
     def get_athletes(self) -> pd.DataFrame:
         return self.df_athletes.copy()
@@ -103,8 +157,8 @@ class KaggleOlympicGamesMedals:
     def get_merged_athletes(self) -> pd.DataFrame:
         return self.clean_data(self.merge_hosts(self.get_athletes()))
 
-    def get_merged_medals(self) -> pd.DataFrame:
-        return self.clean_data(self.merge_hosts(self.get_medals()))
+    def get_results(self) -> pd.DataFrame:
+        return self.df_results.copy()
 
     def get_merged_results(self) -> pd.DataFrame:
         return self.clean_data(self.merge_hosts(self.get_results()))
@@ -125,7 +179,7 @@ class KaggleOlympicGamesMedals:
                              left_on='slug_game', right_on='game_slug')
 
         # Remove merged column
-        df_merged.drop(['slug_game', 'game_slug'], inplace=True, axis=1)
+        df_merged.drop(['game_slug'], inplace=True, axis=1)
 
         return df_merged
 
@@ -229,6 +283,7 @@ class KaggleOlympicGamesMedals:
         - pd.DataFrame: A heatmap DataFrame representing the count of participants in each discipline
         over the game years.
         """
+        # Make a copy of the DataFrame to avoid modifying the original, filtering by season, and reset the index
         df = df[df['game_season'] == season].reset_index(drop=True).copy()
         df_disciplines_year = df.groupby(['discipline_title', 'game_year'])['participant_type']\
                                 .count().reset_index()
@@ -374,3 +429,15 @@ class KaggleOlympicGamesMedals:
             plt.savefig(
                 f'{country.lower()}_{season.lower()}_medals.png', dpi=300)
         plt.show()
+
+    def get_country_name_codes(self) -> pd.DataFrame:
+        """
+        Returns a DataFrame containing the country name and code for each country in the medals dataset.
+
+        :return: pd.DataFrame
+        """
+        df = self.get_medals_by_country(
+        )[['country_name', 'country_3_letter_code']].set_index('country_name').sort_index()
+
+        # Drop duplicate country codes
+        return df.drop_duplicates(['country_3_letter_code']).reset_index()
