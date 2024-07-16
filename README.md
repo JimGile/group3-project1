@@ -1,4 +1,4 @@
-# Group 3 - EDA Project 1
+# Group 3 - Exploratory Data Analysis (EDA) Project 1
 
 ## Team Members
 
@@ -15,12 +15,14 @@
 
 ## Topic
 
-Investigate Olympic results over time. Find the correlation to GDP, population and viewership by country, analyzed for select events: Summer vs Winter, Men vs Women, Individual vs Team.
+Investigate Olympic medal count results over time. Look for correlations to GDP, population, and viewership by country. Perform analysis for select events broken down by Summer vs Winter, Men vs Women, and Individual vs Team.
+
 (Specific events to be determined based on data findings)
 
 ## Questions
 
-* How does medal counts change for each event per country based on Men vs Women and Individual vs Team?
-* How do high and low earning countries’ results correlate to the GDP before, during and after?
+* How do medal count results change by country based on Summer vs Winter, Men vs Women, and Individual vs Team?
+* What is the correlation between results and GDP?
 * What is the correlation between results and viewership?
-* What is the correlation of results and population sizes?
+* What is the correlation between results and population sizes?
+* Do certain countries dominate specific events?
