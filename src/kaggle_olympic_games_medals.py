@@ -339,10 +339,10 @@ class KaggleOlympicGamesMedals:
             over the game names.
         """
         # Get data for given country
-        df = df[df['country_name'] == country]
+        df_medal = df[df['country_name'] == country]
 
         # Group by game_name and discipline_title and count number of participants
-        df_medal = df.groupby(['game_name', 'discipline_title'])['participant_type'].count()\
+        df_medal = df_medal.groupby(['game_name', 'discipline_title'])['participant_type'].count()\
             .reset_index()
 
         # Reorient dataframe with discipline_title values as rows (index) and game_name values as columns via pivot
@@ -383,16 +383,10 @@ class KaggleOlympicGamesMedals:
         """
         plt.figure(figsize=size)
         ax = sns.heatmap(df, annot=False, cbar=False,
-                         linewidths=0.8, linecolor='black',
+                         linewidths=0.8, linecolor='lightgrey',
                          square=True, cmap='Spectral')
-        ax.set_title(f'{title} Games', size=22)
-        ax.tick_params(axis='x', labelsize=14)
-        ax.tick_params(axis='y', labelsize=16)
-        ax.set_ylabel('')
-        ax.set_xlabel('')
+        ax.set_title(f'Disciplines Contested at the {title} Olympic Games', size=18)
         ax.xaxis.tick_top()
-        ax.xaxis.set_ticks_position('none')
-        ax.yaxis.set_ticks_position('none')
         ax.spines[['bottom', 'right']].set_visible(True)
         plt.tight_layout()
         if save:
@@ -416,14 +410,12 @@ class KaggleOlympicGamesMedals:
         :return: None
         """
         plt.figure(figsize=figsize)
-        ax = sns.heatmap(df, annot=True, annot_kws={"fontsize": 16},
-                         cbar=False, linewidths=.8, fmt='g', cmap='coolwarm')
-        ax.set_title(f'{country} {season} Medals', size=20)
-        ax.tick_params(axis='x', which='major', labelsize=14)
-        ax.tick_params(axis='y', which='major', labelsize=16)
+
+        # Create the heatmap with annotations
+        labels = df.map(lambda v: int(v) if not pd.isna(v) else 0)
+        ax = sns.heatmap(df, annot=labels, fmt='g', linewidths=0.8, cmap='coolwarm')
+        ax.set_title(f'{country} {season} Medals', size=18)
         ax.xaxis.tick_top()
-        ax.set_ylabel('')
-        ax.set_xlabel('')
         plt.tight_layout()
         if save:
             plt.savefig(
