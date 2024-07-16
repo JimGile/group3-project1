@@ -26,3 +26,11 @@ Investigate Olympic medal count results over time. Look for correlations to GDP,
 * What is the correlation between results and viewership?
 * What is the correlation between results and population sizes?
 * Do certain countries dominate specific events?
+
+
+## Updated Questions, July 15
+
+* Medal comparisons by country, year, sport
+* Happiness < > olympics
+* GDP < > olympics
+* Nutrition < > olympics
