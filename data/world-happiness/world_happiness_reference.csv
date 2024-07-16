@@ -1,0 +1,12 @@
+Variable,Description
+country,Name of the country.
+year,"Survey year, ranging from 2005-2018."
+happiness,A happiness ranking on a scale of 0 to 10.
+wealth,"Log GDP per capita, which indicates the wealth of the country."
+support,A value that indicates how many people have family and friends that they can rely on.
+health,Healthy life expectancy at birth.
+freedom,Satisfaction with individual freedom to make life choices.
+generosity,Measure of how likely people are to donate to charity.
+corruption,Measure of national corruption
+positivity,"Average of  measures for happiness, laugh and enjoyment."
+negativity,"Average of measures for worry, sadness and anger."
