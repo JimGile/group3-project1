@@ -119,7 +119,7 @@ class KaggleOlympicGamesMedals:
         Note:
         - The function assumes that the input DataFrame is a pandas DataFrame.
         - The function does not modify the input DataFrame.
-        """        
+        """
         print("-- Info --")
         print(df.info())
         print("\n-- Missing Info --")
@@ -246,7 +246,7 @@ class KaggleOlympicGamesMedals:
 
         Returns:
             pd.DataFrame: A pandas DataFrame containing the merged and cleaned results data.
-        """        
+        """
         return self._clean_data(self._merge_hosts(self.get_results()))
 
     def _merge_hosts(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -326,7 +326,8 @@ class KaggleOlympicGamesMedals:
                'discipline_title'] = 'Rugby Sevens'
         df.loc[df['event_title'] == 'rugby-7 men', 'event_title'] = 'men'
         df.loc[df['event_title'] == 'rugby-7 women', 'event_title'] = 'women'
-        df['event_title'] = df['event_title'].apply(lambda et: self._clean_event_title(et))
+        df['event_title'] = df['event_title'].apply(
+            lambda et: self._clean_event_title(et))
         return df
 
     def pre_process_medal_counts(self, df: pd.DataFrame):
@@ -396,7 +397,7 @@ class KaggleOlympicGamesMedals:
         disciplines_older = df_heatmap[df_heatmap[most_current_game_year] != 1].sort_values(
             column_list)
         df_heatmap = pd.concat([disciplines_current, disciplines_older])
-        
+
         # Format the index and columns of the heatmap
         df_heatmap.columns = [str(col)[:-2]+'\n'+str(col)[-2:]
                               for col in column_list]
@@ -539,7 +540,8 @@ class KaggleOlympicGamesMedals:
         ax = sns.heatmap(df, annot=False, cbar=False,
                          linewidths=0.8, linecolor='lightgrey',
                          square=True, cmap='Spectral')
-        ax.set_title(f'Disciplines Contested at the {title} Olympic Games', size=18)
+        ax.set_title(
+            f'Disciplines Contested at the {title} Olympic Games', size=18)
         ax.xaxis.tick_top()
         ax.spines[['bottom', 'right']].set_visible(True)
         plt.tight_layout()
@@ -561,12 +563,14 @@ class KaggleOlympicGamesMedals:
         """
         # Create the heatmap with annotations
         plt.figure(figsize=figsize)
-        ax = sns.heatmap(df, annot=True, fmt='g', linewidths=0.8, cmap='coolwarm')
+        ax = sns.heatmap(df, annot=True, fmt='g',
+                         linewidths=0.8, cmap='coolwarm')
         ax.set_title(f'{country} {season} Medals', size=18)
         ax.xaxis.tick_top()
         plt.tight_layout()
         if save:
-            plt.savefig(f'{country.lower()}_{season.lower()}_medals.png', dpi=200)
+            plt.savefig(
+                f'{country.lower()}_{season.lower()}_medals.png', dpi=200)
         plt.show()
 
     def plot_country_discipline_gender_medal_heatmap(
@@ -580,12 +584,15 @@ class KaggleOlympicGamesMedals:
             save=False):
 
         plt.figure(figsize=figsize)
-        ax = sns.heatmap(df, annot=True, fmt='g', linewidths=0.8, cmap='coolwarm')
-        ax.set_title(f'{country} {season} {discipline} Medals - {gender}', size=22)
+        ax = sns.heatmap(df, annot=True, fmt='g',
+                         linewidths=0.8, cmap='coolwarm')
+        ax.set_title(
+            f'{country} {season} {discipline} Medals - {gender}', size=22)
         ax.xaxis.tick_top()
         plt.tight_layout()
         if save:
-            plt.savefig(f'{country.lower()}_{season.lower()}_{discipline.lower()}_{gender.lower()}_medals.png', dpi=200)
+            plt.savefig(
+                f'{country.lower()}_{season.lower()}_{discipline.lower()}_{gender.lower()}_medals.png', dpi=200)
         plt.show()
 
     def get_country_name_codes(self) -> pd.DataFrame:
