@@ -1,0 +1,10 @@
+column_name,column_description
+country_code,Country Code
+country_name,Country Name
+calories_pct,Percent of the population who cannot afford sufficient calories [CoCA_headcount]
+nutrients_pct,Percent of the population who cannot afford nutrient adequacy [CoNA_headcount]
+diet_pct,Percent of the population who cannot afford a healthy diet [CoHD_headcount]
+calories_mills,Millions of people who cannot afford sufficient calories [CoCA_unafford_n]
+nutrients_mills,Millions of people who cannot afford nutrient adequacy [CoNA_unafford_n]
+diet_mills,Millions of people who cannot afford a healthy life [CoHD_unafford_n]
+population,Population [Pop]
