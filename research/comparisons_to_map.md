@@ -13,8 +13,11 @@
 
 ## Data
 * Number of countries we compared (247 countries total)
-* 103 countries received a medal for Summer games
-* _____ countries received a medal for Winter games
+* ____ Total number of events
+* 103 countries received a medal for Summer games : Women
+* 136 countries received a medal for Summer games : Men
+* 36 countries received a medal for Winter games : Women
+* ____ countries received a medal for Winter games : Men
 * Number of countries with a medal vs without
 
 
