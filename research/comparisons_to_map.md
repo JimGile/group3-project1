@@ -1,7 +1,6 @@
 ## Data to compare
 
 * Men vs women number of gold, silver and bronze medals (both summer and winter)
-* Summer vs Winter, number of gold, silver and bronze medals for top 5 countries in summer vs winter
 * Top 10 countries GDP and their top respective top 10 events
 * What is the numerical relationship of top 5 highest awarded medal countries, and lowest 5 for happiness, GDP and nutrition
 * What is the correlation # of these?
