@@ -17,7 +17,7 @@
 * 103 countries received a medal for Summer games : Women
 * 136 countries received a medal for Summer games : Men
 * 36 countries received a medal for Winter games : Women
-* ____ countries received a medal for Winter games : Men
+* 38 countries received a medal for Winter games : Men
 * Number of countries with a medal vs without
 
 
@@ -25,6 +25,7 @@
 * US skews all the data
 * When comparing correlation we removed the outliers and largest awarded to find a more manageable number, and while there were some changes,
 primarily we found little correlation between the olympics and nutrition or happiness. Happiness had the least correlation, despite our hopes.
+* This is not the case when we started breaking down the correlations by Summer/Winter and Men/Women. Stronger correlations can be found once we focused on specific populations
 * We found a slight correlation between GDP and the Olympics, this is strengthened in correlation with the highest awarded countries (USA, Russia, etc) included,
 as these countries also have higher GDPs we can infer a probable correlation of GDP to medals won (likely have greater means to invest in their athletes)
 
