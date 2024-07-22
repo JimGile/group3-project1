@@ -21,6 +21,13 @@ Our hypothesises was that there would be a strong correlation among all three an
 
 During the process we found some team learnings in utilizing classes and functions to streamline processing, pivoting research analysis to match available data, the ability to change midstream when data was inaccessible or expensive to obtain, and the importance of good repository management.
 
+Questions to answer:
+  * What are the most awarded counties by medal, year and select events?
+  * What, if any, is the relationship between happiness and the Olympics?
+  * What, if any, is the relationship between the GDP and the Olympics?
+  * What, if any, is the relationship between nutrition and the Olympics?
+  * How strong are these correlations?
+
 ## Sourced Data
 * Kaggle - Olympic Data 
 - [Olympic Summer & Winter Games, 1896-2022](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
@@ -30,10 +37,18 @@ During the process we found some team learnings in utilizing classes and functio
 - [Olympics Althlete Events Analysis](https://www.kaggle.com/datasets/samruddhim/olympics-althlete-events-analysis)
 - [Summer Olympics Medals (1976-2008)](https://www.kaggle.com/datasets/divyansh22/summer-olympics-medals)
 * World Happiness
-- [World-Happiness-Report] (https://worldhappiness.report/data/)
+- [World-Happiness-Report](https://worldhappiness.report/data/)
 * World Bank - GDP & Nutrition
-- [GDP] (https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
-- [Nutrition] (https://databank.worldbank.org/source/food-prices-for-nutrition/Type/TABLE/preview/on)
+- [GDP](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
+- [Nutrition](https://databank.worldbank.org/source/food-prices-for-nutrition/Type/TABLE/preview/on)
+
+## Installation
+1. Clone the Repository  - git@github.com:JimGile/group3-project1.git
+2. Create a virtual environment - python -m venv venv
+3. Activate the virtual environment - venv\Scripts\activate
+4. pip install pandas, numpy, plotly, matplotlib, seaborn, jupyter
+
+The following files will be found in the repository and can be loaded using similar installation instructions:
 
 ## Kaggle Olympic Games Medals Analysis Class
 The olympic data was extensive and had various files to find the information required.  Do to the need for simplifying, Jim created a class that could be used throughout the project. The `KaggleOlympicGamesMedals` class helps to process and visualize this data.
@@ -171,7 +186,6 @@ Overview:
 This Jupyter Notebook, `jg_medal_type_correlation_with_games.ipynb`, provides an analysis of the correlation between different types of Olympic medals (gold, silver, bronze) and various Olympic Games. The notebook aims to uncover trends and patterns in medal distributions across different events and games.
 
 Requirements:
-To run this notebook, you need to have the following Python libraries installed:
   * pandas
   * seaborn
   * matplotlib - pyplot
@@ -180,7 +194,7 @@ Data Files:
   * olympic_medals.csv
   * games_data.csv
 
-  Features:
+Features:
   * Load the datasets into pandas DataFrames.
   * Handle missing values, duplicates, and inconsistent data.
   * Analyze the correlations between different medal types and Olympic Games.
@@ -191,13 +205,126 @@ Results:
   * Insightful visualizations showing trends in medal types across different Olympic Games.
   * A deeper understanding of how different games and events correlate with medal distributions.
 
-  
-## Questions
+## Olympic Medal Detail Correlations
+Overview
+This Jupyter Notebook, `jg_medal_detail_correlations.ipynb`, analyzes correlations between various factors (like GDP, nutrition, and world happiness) and Olympic medal counts. The goal is to uncover patterns and insights that can explain country performances in the Olympic Games.
 
-* How do medal count results change by country based on Summer vs Winter, Men vs Women, and Individual vs Team?
-* What is the correlation between results and GDP?
-* What is the correlation between results and viewership?
-* What is the correlation between results and population sizes?
-* Do certain countries dominate specific events?
+Requirements:
+  * pandas
+  * seaborn
+  * numpy
+  * matplotlib
+
+Data Files:
+  * olympic_medals.csv
+  * world_happiness.csv
+  * nutrition_data.csv
+  * gdp_data.csv
+
+Features:
+  * Load the datasets into pandas DataFrames.
+  * Handle missing values, duplicates, and inconsistent data.
+  * Analyze the correlations between medal counts and various factors.
+  * Generate plots and charts to visualize the findings. 
+
+Results:
+  * Cleaned and analyzed datasets.
+  * Insightful visualizations showing correlations between medal counts and factors like GDP, nutrition, and happiness.
+  *  A deeper understanding of how these factors relate to Olympic success.
+
+## Merging Olympic Datasets
+Overview:
+This Jupyter Notebook, `jg_merge_datasets.ipynb`, demonstrates how to merge multiple Olympic-related datasets to create a comprehensive dataset for further analysis. The notebook combines data on Olympic medals, world happiness, nutrition, and GDP.
+
+Requirements: 
+  * pandas
+  * numpy
+  * seaborn
+  * matplotlib
+
+Data Files:
+  * olympic_medals.csv
+  * world_happiness.csv
+  * nutrition_data.csv
+  * gdp_data.csv
+
+Features:
+  * Load the datasets into pandas DataFrames.
+  * Handle missing values, duplicates, and inconsistent data.
+  * Merge datasets to create a comprehensive DataFrame for analysis.
+  * Initial data exploration using descriptive statistics and visualizations.
+
+Results:
+  * Cleaned and merged datasets.
+  * A comprehensive DataFrame that integrates Olympic medals, world happiness, nutrition, and GDP data.
+
+## World Happiness Analysis
+Overview:
+This Jupyter Notebook, `world_happiness.ipynb`, provides an analysis of the World Happiness Report data. The notebook explores trends and patterns in happiness scores across different countries and examines factors that contribute to overall happiness.
+
+Requirements:
+  * pandas
+  * numpy
+  * seaborn
+  * matplotlib
+
+Data Files:
+  * world_happiness_data.csv
+
+Features:
+  * Load the World Happiness Report data into a pandas DataFrame.
+  * Handle missing values, duplicates, and inconsistent data.
+  * Initial data exploration using descriptive statistics and visualizations.
+  * Analyze the factors contributing to happiness scores.
+  * Generate plots and charts to visualize the findings.
+
+Results:
+  * Cleaned and analyzed World Happiness Report data.
+  * Insightful visualizations showing trends and patterns in happiness scores.
+  * A deeper understanding of the factors that contribute to happiness across different countries. 
+
+##  Nutrition Data Cleaning
+Overview:
+This Jupyter Notebook, `jg_clean_nutrition.ipynb`, focuses on cleaning and preprocessing nutrition data. The notebook handles missing values, duplicates, and inconsistent data to prepare the dataset for further analysis.
+
+Requirements:
+  * pandas
+  * numpy
+
+Data Files:
+  * nutrition_data.csv
+
+Features:
+  * Load the nutrition data into a pandas DataFrame.
+  * Handle missing values, duplicates, and inconsistent data.
+  * Perform necessary transformations to standardize the dataset.
+  * Initial data exploration using descriptive statistics and visualizations to verify the cleaning process.
+
+Results:
+  * A cleaned and standardized nutrition dataset ready for further analysis.
+
+##  World Bank GDP Analysis (1960-2023)
+Overview:
+This Jupyter Notebook, `World_Bank_GDP_1960_2023.ipynb`, provides an analysis of the World Bank GDP data from 1960 to 2023. The notebook explores trends and patterns in GDP across different countries and examines economic growth over time.
+
+Requirements:
+  * pandas
+  * numpy
+  * seaborn
+  * matplotlib
+
+Features:
+  * Load the World Bank GDP data into a pandas DataFrame.
+  * Handle missing values, duplicates, and inconsistent data.
+  * Initial data exploration using descriptive statistics and visualizations.
+  * Analyze GDP trends and growth patterns over time.
+  * Generate plots and charts to visualize the findings.
+
+Results:
+  * Cleaned and analyzed World Bank GDP data from 1960 to 2023.
+  * Insightful visualizations showing GDP trends and economic growth patterns.
+  * A deeper understanding of the economic performance of different countries over time.
+
+
 
 
