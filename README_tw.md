@@ -17,7 +17,7 @@
 ## Project Overview
 As a group we wanted to find a topic that was relevant to our interests, timely in the world, and with enough data to provide valid research for the project.  With that in mind, we set out to review Olympic medal count results over time to determine how strong the correlation was with  each country's happiness index, the country's overall GDP, and the availability of an adequate diet of the population. 
 
-Our hypothesises was that there would be a strong correlation among all three and that the happier countries, those with greater GDP's, and those with higher adequate diet would have larger overall medal counts. In order to determine if this was accurate; we needed to analyze and compare Olympic data from Kaggle, GDP & diet information from World Bank, and the World Happiness index for each country.  We then had to clean up the data to be able to compare across each data set and come up with any correlations that existed.  
+Our hypotheses was that there would be a strong correlation among all three and that the happier countries, those with greater GDP's, and those with higher adequate diet would have larger overall medal counts. In order to determine if this was accurate; we needed to analyze and compare Olympic data from Kaggle, GDP & diet information from World Bank, and the World Happiness index for each country.  We then had to clean up the data to be able to compare across each data set and come up with any correlations that existed.  
 
 During the process we found some team learnings in utilizing classes and functions to streamline processing, pivoting research analysis to match available data, the ability to change midstream when data was inaccessible or expensive to obtain, and the importance of good repository management.
 
@@ -340,6 +340,6 @@ During this project we discovered a few learning, both good and bad, that will h
   * It's ok to pivot and change after seeing the data available to work with.
 
 ## If we were to continue...
-If there was more time to continue on this effort we would have taken the time to breakdown the data further and test our hypothesises at a more macro level on specific events and potentially individula athletes to see if there would have been any difference in the correlations with GDP, Diet, and happiness.
+If there was more time to continue on this effort we would have taken the time to breakdown the data further and test our hypotheses at a more macro level on specific events and potentially individula athletes to see if there would have been any difference in the correlations with GDP, Diet, and happiness.
 
 
