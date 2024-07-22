@@ -1,0 +1,26 @@
+## Resources to help with visual formtting
+
+# Seaborn Formatting
+https://indianaiproduction.com/seaborn-heatmap/
+
+# Seaborn Gallery, Color Control
+https://python-graph-gallery.com/92-control-color-in-seaborn-heatmaps/
+
+# Panda Table Formatting
+https://pandas.pydata.org/docs/user_guide/style.html
+
+# Via Google Gemini
+"To rename the axes in a seaborn heatmap, you can modify the matplotlib Axes object that the heatmap is plotted on. Here's how:
+* Create the heatmap: Use sns.heatmap() to create your heatmap. Store the returned Axes object in a variable (here, ax).
+* Set axis labels: Use the set_xlabel() and set_ylabel() methods on the Axes object (ax) to set the desired labels.
+* Show the plot: Use plt.show() to display the heatmap with the updated labels."
+
+# Pandas plot.scatter
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.scatter.html
+
+# Combining two heatmaps
+https://stackoverflow.com/questions/48272437/combining-two-heat-maps-in-seaborn
+
+# Correlations in Python
+https://www.geeksforgeeks.org/exploring-correlation-in-python/
+
