@@ -43,7 +43,7 @@ Questions to answer:
 - [Nutrition](https://databank.worldbank.org/source/food-prices-for-nutrition/Type/TABLE/preview/on)
 
 ## Installation
-1. Clone the Repository  - git@github.com:JimGile/group3-project1.git
+1. Clone the Repository  - git clone git@github.com:JimGile/group3-project1.git
 2. Create a virtual environment - python -m venv venv
 3. Activate the virtual environment - venv\Scripts\activate
 4. pip install pandas, numpy, plotly, matplotlib, seaborn, jupyter
