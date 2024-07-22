@@ -339,7 +339,7 @@ During this project we discovered a few learning, both good and bad, that will h
   * Utilizing branching in a repository has major benefits, but is also difficult for early programmers
   * It's ok to pivot and change after seeing the data available to work with.
 
-## If we were to continuee...
+## If we were to continue...
 If there was more time to continue on this effort we would have taken the time to breakdown the data further and test our hypothesises at a more macro level on specific events and potentially individula athletes to see if there would have been any difference in the correlations with GDP, Diet, and happiness.
 
 
