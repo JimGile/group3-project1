@@ -325,6 +325,18 @@ Results:
   * Insightful visualizations showing GDP trends and economic growth patterns.
   * A deeper understanding of the economic performance of different countries over time.
 
+## Summary of Analysis
+We went into this project with the expectation that happiness levels, adequate diet, and overall country GDP would have all been highly correlated with the country winning gold medals.  What we found was a very strong correlation between GDP and winning a medal in the olypics, however there was not nearly as storng a correlation with adequate diet and happiness as we expected. 
 
+## Project Learnings
+During this project we discovered a few learning, both good and bad, that will help for any future endeavors we take on:
+  * Creating classes and functions will help stremaline processes and prevent repeating the same work over an over
+  * Some findings cannot be discovered until the data is reviewed thouroughly, and once discovered could change the course of the work
+  * Not all data is created equal and sometimes cannot be used even when seemingly perfect for the task
+  * Utilizing branching in a repository has major benefits, but is also difficult for early programmers
+  * It's ok to pivot and change after seeing the data available to work with.
+
+## If we were to continuee...
+If there was more time to continue on this effort we would have taken the time to breakdown the data further and test our hypothesises at a more macro level on specific events and potentially individula athletes to see if there would have been any difference in the correlations with GDP, Diet, and happiness.
 
 
