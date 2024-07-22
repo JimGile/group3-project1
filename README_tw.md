@@ -30,14 +30,17 @@ Questions to answer:
 
 ## Sourced Data
 Kaggle - Olympic Data 
+
 - [Olympic Summer & Winter Games, 1896-2022](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
 - [olympic-data](https://www.kaggle.com/datasets/bhanupratapbiswas/olympic-data)
 - [olympic-games-medals-19862018](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
 - [Olympics Legacy: 1896-2020](https://www.kaggle.com/datasets/krishd123/olympics-legacy-1896-2020)
 - [Olympics Althlete Events Analysis](https://www.kaggle.com/datasets/samruddhim/olympics-althlete-events-analysis)
 - [Summer Olympics Medals (1976-2008)](https://www.kaggle.com/datasets/divyansh22/summer-olympics-medals)
+
 World Happiness
 - [World-Happiness-Report](https://worldhappiness.report/data/)
+
 World Bank - GDP & Nutrition
 - [GDP](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD)
 - [Nutrition](https://databank.worldbank.org/source/food-prices-for-nutrition/Type/TABLE/preview/on)
