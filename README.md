@@ -31,6 +31,10 @@ Questions to answer:
 * What, if any, is the relationship between nutrition and the Olympics?
 * How strong are these correlations?
 
+## Presentation
+
+You can find the presentation here: https://docs.google.com/presentation/d/1iucIm10G-ITVdgy4NuSisT0pGJLLrzEakrEm3jx-SPY/edit?usp=sharing
+
 ## Sourced Data
 
 Kaggle - Olympic Data
